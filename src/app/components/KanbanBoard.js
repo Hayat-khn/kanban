@@ -20,12 +20,10 @@ export default function KanbanBoard() {
     setColumns(savedTasks);
   }, []);
 
-  // Save tasks to local storage when columns update
   useEffect(() => {
     saveTasks(columns);
   }, [columns]);
 
-  // Add a new task
   const addTask = (columnId) => {
     const taskContent = prompt("Enter task name:");
     if (!taskContent) return;
@@ -38,7 +36,6 @@ export default function KanbanBoard() {
     );
   };
 
-  // Delete a task
   const deleteTask = (taskId) => {
     setColumns((prev) =>
       prev.map((col) => ({
@@ -48,7 +45,7 @@ export default function KanbanBoard() {
     );
   };
 
-  // Update a task
+  
   const updateTask = (taskId) => {
     const newContent = prompt("Update task name:");
     if (!newContent) return;
@@ -97,7 +94,6 @@ export default function KanbanBoard() {
   );
 }
 
-// Internal Styling
 const styles = {
   board: {
     display: "flex",
