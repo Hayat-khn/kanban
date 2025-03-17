@@ -14,11 +14,11 @@ export default function DarkModeToggle() {
 
   useEffect(() => {
     if (darkMode) {
-      document.body.style.backgroundColor = "#2c2c2c"; // Softer dark mode
-      document.body.style.color = "#e0e0e0"; // Light gray text instead of pure white
+      document.body.style.backgroundColor = "#2c2c2c"; 
+      document.body.style.color = "#e0e0e0"; 
     } else {
-      document.body.style.backgroundColor = "#f5f5f5"; // Light gray instead of pure white
-      document.body.style.color = "#222"; // Dark gray instead of pure black
+      document.body.style.backgroundColor = "#f5f5f5"; 
+      document.body.style.color = "#222"; 
     }
     localStorage.setItem("dark-mode", JSON.stringify(darkMode));
   }, [darkMode]);
@@ -27,9 +27,8 @@ export default function DarkModeToggle() {
     setDarkMode((prevMode) => !prevMode);
   };
 
-  // Softer Dark Mode Styling
   const darkModeStyles = {
-    backgroundColor: darkMode ? "#3a3a3a" : "#fff", // Dark gray instead of black
+    backgroundColor: darkMode ? "#3a3a3a" : "#fff", 
     color: darkMode ? "#e0e0e0" : "#000",
     padding: "10px",
     borderRadius: "5px",
